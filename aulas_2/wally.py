@@ -2,21 +2,22 @@
 import cv2 as cv
 import numpy as np
 
+
 scene_img = cv.imread("/home/andre/Pictures/scene.jpg", 0)
 wally_img = cv.imread("/home/andre/Pictures/wally.png", 0)
+
 #para apresentar o resultado
 scenee_img = cv.imread("/home/andre/Pictures/scene.jpg", cv.IMREAD_UNCHANGED)
 #cv.imshow("scene", scene_img)
 
-
-
 result = cv.matchTemplate(scene_img, wally_img, cv.TM_CCOEFF_NORMED)
 
 cv.imshow("result", result)
+
 #cv.waitKey()
 cv.destroyAllWindows()
 
-#vai nos dar a melhor math loc
+#vai nos dar a melhor math localizaçao do wally
 min_val, max_val, min_loc, max_loc = cv.minMaxLoc(result)
 
 print('Best match top left position: %s' % str(max_loc))
