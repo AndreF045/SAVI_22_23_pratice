@@ -12,4 +12,5 @@ while(1):
     cv.imshow('Double click to blue ball',img)
     if cv.waitKey(20) & 0xFF == 10:
         break
+    cv.waitKey()
 cv.destroyAllWindows()
