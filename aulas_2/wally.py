@@ -26,7 +26,7 @@ print('Best match confidence: %s' % max_val)
 threshold = 0.4
 
 if max_val >= threshold:
-    print('wally.')
+    print('wally found!')
 
     
     wally_w = wally_img.shape[1]
