@@ -13,5 +13,5 @@ k = cv.waitKey(0)
 if k == ord("s"):
     cv.imwrite("man.png", img)
 
-    ##nice
+    
 
