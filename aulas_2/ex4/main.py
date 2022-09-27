@@ -8,7 +8,7 @@ def main():
     wally_img = cv2.imread("/home/andre/Pictures/wally.png")
 
     #image em grey
-    #grey = cv2.cvtColor(scene_img,cv2.COLOR_BGR2GRAY)
+    scene_grey = cv2.cvtColor(scene_img,cv2.COLOR_BGR2GRAY)
 
     #para apresentar o resultado
 
@@ -19,15 +19,20 @@ def main():
     cv2.destroyAllWindows()
 
     #vai nos dar a melhor math localizaçao do wally
-    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+    _, max_val, _, max_loc = cv2.minMaxLoc(result)
 
     print('Best match top left position: %s' % str(max_loc))
     print('Best match confidence: %s' % max_val)
 
+    image_gui = scene_img * 0
+    #mask =
+
+
+
     threshold = 0.4
 
     if max_val >= threshold:
-        print('wally found!')
+        #print('wally found!')
 
         
         wally_w = wally_img.shape[1]
@@ -36,10 +41,10 @@ def main():
         # Calculate the bottom right corner of the rectangle to draw
         top_left = max_loc
         bottom_right = (top_left[0] + wally_w, top_left[1] + wally_h)
-
+        
         
         cv2.rectangle(scene_img, top_left, bottom_right, 
-                        color=(0, 255, 0), thickness=2, lineType=cv2.LINE_4)
+                        color=(0, 255, 0), thickness=2)
 
 
         cv2.imshow("esta aqui o wally", scene_img)
