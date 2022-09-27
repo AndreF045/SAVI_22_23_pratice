@@ -15,7 +15,7 @@ cv2.imshow("result", result)
 cv2.destroyAllWindows()
 
 #vai nos dar a melhor math localizaçao do wally
-min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+_, max_val, _, max_loc = cv2.minMaxLoc(result)
 
 print('Best match top left position: %s' % str(max_loc))
 print('Best match confidence: %s' % max_val)
