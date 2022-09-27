@@ -1,6 +1,6 @@
 from pickletools import uint8
 import numpy as np
-import cv2 as cv
+import cv2 
 
 
 def main():
@@ -18,9 +18,9 @@ image = np.random.randint(0, high= 255, size=(240,320), dtype= np.uint8
 #image = image*0 +128
 image += 128 
 
-cv.imshow("window", image)
+cv2.imshow("window", image)
 
-cv.waitKey(0)
+cv2.waitKey(0)
 
 
 
