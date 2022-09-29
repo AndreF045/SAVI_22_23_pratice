@@ -5,7 +5,7 @@ import cv2
 def main():
 
     scene_img = cv2.imread("/home/andre/Desktop/Savi/SAVI_22_23_pratice/aulas_2/images/beach.jpg")
-    wally_img = cv2.imread("/home/andre/Pictures/wally.png")
+    wally_img = cv2.imread("/home/andre/Pictures/wallly.png")
 
     #para apresentar o resultado
 
@@ -22,7 +22,7 @@ def main():
     print('Best match top left position: %s' % str(max_loc))
     print('Best match confidence: %s' % max_val)
 
-    threshold = 0.2
+    threshold = 0.1
 
     if max_val >= threshold:
         print('wally found!')
@@ -37,7 +37,7 @@ def main():
 
         
         cv2.rectangle(scene_img, top_left, bottom_right, 
-                        color=(0, 255, 0), thickness=2, lineType=cv2.LINE_4)
+                        color=(255, 0, 0), thickness=2, lineType=cv2.LINE_4)
 
         cv2.imshow("esta aqui o wally", scene_img)
         cv2.waitKey()

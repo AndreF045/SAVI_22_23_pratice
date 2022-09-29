@@ -13,6 +13,6 @@ cv.setMouseCallback('image',draw_circle)
 
 while(1):
     cv.imshow('image',img)
-    if cv.waitKey(20) & 0xFF == 27:
+    if cv.waitKey("q") & 0xFF == 27:
         break
 cv.destroyAllWindows()
