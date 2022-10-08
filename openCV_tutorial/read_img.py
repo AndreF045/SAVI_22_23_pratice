@@ -2,6 +2,7 @@
 
 import cv2 as cv
 import sys
+
 img = cv.imread("/home/andre/Pictures/man.jpg")
 
 if img is None:
