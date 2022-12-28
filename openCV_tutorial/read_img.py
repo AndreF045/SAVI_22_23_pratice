@@ -3,7 +3,7 @@
 import cv2 as cv
 import sys
 
-img = cv.imread("/home/andre/Pictures/green_man.jpeg")
+img = cv.imread("/home/andre/Pictures/man.jpeg")
 
 if img is None:
     sys.exit("Could not read the image.")
